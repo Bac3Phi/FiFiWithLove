@@ -1,106 +1,757 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Article</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- saved from url=(0054)https://s.codepen.io/bac3phi/debug/bmXzed/XBAGRZmdnbdr -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="images.ico">
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+  <title>Fifi with love 💖</title>
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-  <link rel="stylesheet" type="text/css" href="css/default.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="index.js"></script>
+      <style>
+      @import url(https://fonts.googleapis.com/css?family=Palanquin:700);
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "liga", "kern";
+          font-feature-settings: "liga", "kern";
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1dd2af;
+  background: linear-gradient(-150deg, #E03BE7, #F04151);
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  position: relative;
+  height: 50vh;
+  width: 50vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(25, 25, 25, 0.25);
+}
+
+@-webkit-keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  17.5% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  17.5% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+#Heart_2_ {
+  cursor: pointer;
+  will-change: transform;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: heart 1.8s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+          animation: heart 1.8s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+@-webkit-keyframes fadeInDown {
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+#Thanks {
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #13414c;
+  font-size: 5vh;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  opacity: 0;
+  -webkit-animation: fadeInDown 1s ease-out;
+          animation: fadeInDown 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+@-webkit-keyframes bubble {
+  0%,100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    stroke-width: 0;
+    stroke: rgba(233, 172, 193, 0);
+  }
+  15% {
+    fill: #E9ACC1;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    stroke: #E9ACC1;
+    stroke-width: 6;
+  }
+  100% {
+    fill: rgba(233, 172, 193, 0);
+  }
+}
+
+@keyframes bubble {
+  0%,100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    stroke-width: 0;
+    stroke: rgba(233, 172, 193, 0);
+  }
+  15% {
+    fill: #E9ACC1;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    stroke: #E9ACC1;
+    stroke-width: 6;
+  }
+  100% {
+    fill: rgba(233, 172, 193, 0);
+  }
+}
+#Circle {
+  fill: #E9ACC1;
+  will-change: transform;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: bubble 1.8s cubic-bezier(0.21, 0.61, 0.35, 1);
+          animation: bubble 1.8s cubic-bezier(0.21, 0.61, 0.35, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes particle {
+  0%,100% {
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(0);
+            transform: translate(0, 0) scale(0);
+  }
+}
+
+@keyframes particle {
+  0%,100% {
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(0);
+            transform: translate(0, 0) scale(0);
+  }
+}
+[id*=Particle] {
+  will-change: transform;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  transform-box: fill-box;
+  opacity: 0;
+  -webkit-animation: particle 2.7s cubic-bezier(0.21, 0.61, 0.35, 1);
+          animation: particle 2.7s cubic-bezier(0.21, 0.61, 0.35, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+[id*=Particle]:nth-child(1) {
+  -webkit-animation-duration: 1327ms;
+          animation-duration: 1327ms;
+}
+
+[id*=Particle]:nth-child(2) {
+  -webkit-animation-duration: 1233ms;
+          animation-duration: 1233ms;
+}
+
+[id*=Particle]:nth-child(3) {
+  -webkit-animation-duration: 1176ms;
+          animation-duration: 1176ms;
+}
+
+[id*=Particle]:nth-child(4) {
+  -webkit-animation-duration: 1963ms;
+          animation-duration: 1963ms;
+}
+
+[id*=Particle]:nth-child(5) {
+  -webkit-animation-duration: 1997ms;
+          animation-duration: 1997ms;
+}
+
+[id*=Particle]:nth-child(6) {
+  -webkit-animation-duration: 1816ms;
+          animation-duration: 1816ms;
+}
+
+[id*=Particle]:nth-child(7) {
+  -webkit-animation-duration: 1357ms;
+          animation-duration: 1357ms;
+}
+
+[id*=Particle]:nth-child(8) {
+  -webkit-animation-duration: 1147ms;
+          animation-duration: 1147ms;
+}
+
+[id*=Particle]:nth-child(9) {
+  -webkit-animation-duration: 1147ms;
+          animation-duration: 1147ms;
+}
+
+[id*=Particle]:nth-child(10) {
+  -webkit-animation-duration: 1661ms;
+          animation-duration: 1661ms;
+}
+
+[id*=Particle]:nth-child(11) {
+  -webkit-animation-duration: 1477ms;
+          animation-duration: 1477ms;
+}
+
+[id*=Particle]:nth-child(12) {
+  -webkit-animation-duration: 1481ms;
+          animation-duration: 1481ms;
+}
+
+[id*=Particle]:nth-child(13) {
+  -webkit-animation-duration: 1554ms;
+          animation-duration: 1554ms;
+}
+
+[id*=Particle]:nth-child(14) {
+  -webkit-animation-duration: 1663ms;
+          animation-duration: 1663ms;
+}
+
+[id*=Particle]:nth-child(15) {
+  -webkit-animation-duration: 1989ms;
+          animation-duration: 1989ms;
+}
+
+[id*=Particle]:nth-child(16) {
+  -webkit-animation-duration: 1367ms;
+          animation-duration: 1367ms;
+}
+
+[id*=Particle]:nth-child(17) {
+  -webkit-animation-duration: 1665ms;
+          animation-duration: 1665ms;
+}
+
+[id*=Particle]:nth-child(18) {
+  -webkit-animation-duration: 1197ms;
+          animation-duration: 1197ms;
+}
+
+[id*=Particle]:nth-child(1) {
+  -webkit-transform: translate(500%, 500%) scale(0);
+          transform: translate(500%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(2) {
+  -webkit-transform: translate(250%, 500%) scale(0);
+          transform: translate(250%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(3) {
+  -webkit-transform: translate(0, 500%) scale(0);
+          transform: translate(0, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(4) {
+  -webkit-transform: translate(-250%, 500%) scale(0);
+          transform: translate(-250%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(5) {
+  -webkit-transform: translate(-500%, 500%) scale(0);
+          transform: translate(-500%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(6) {
+  -webkit-transform: translate(-500%, 250%) scale(0);
+          transform: translate(-500%, 250%) scale(0);
+}
+
+[id*=Particle]:nth-child(7) {
+  -webkit-transform: translate(-500%, 0%) scale(0);
+          transform: translate(-500%, 0%) scale(0);
+}
+
+[id*=Particle]:nth-child(8) {
+  -webkit-transform: translate(-500%, -250%) scale(0);
+          transform: translate(-500%, -250%) scale(0);
+}
+
+[id*=Particle]:nth-child(9) {
+  -webkit-transform: translate(-500%, -500%) scale(0);
+          transform: translate(-500%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(10) {
+  -webkit-transform: translate(-250%, -500%) scale(0);
+          transform: translate(-250%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(11) {
+  -webkit-transform: translate(0%, -500%) scale(0);
+          transform: translate(0%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(12) {
+  -webkit-transform: translate(250%, -500%) scale(0);
+          transform: translate(250%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(13) {
+  -webkit-transform: translate(500%, -500%) scale(0);
+          transform: translate(500%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(14) {
+  -webkit-transform: translate(500%, -250%) scale(0);
+          transform: translate(500%, -250%) scale(0);
+}
+
+[id*=Particle]:nth-child(15) {
+  -webkit-transform: translate(500%, 0%) scale(0);
+          transform: translate(500%, 0%) scale(0);
+}
+
+[id*=Particle]:nth-child(16) {
+  -webkit-transform: translate(500%, 250%) scale(0);
+          transform: translate(500%, 250%) scale(0);
+}
+
+[id*=Particle]:nth-child(17) {
+  -webkit-transform: translate(500%, 500%) scale(0);
+          transform: translate(500%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(18) {
+  -webkit-transform: translate(500%, 500%) scale(0);
+          transform: translate(500%, 500%) scale(0);
+}
+
+.day {
+  display: inline;
+}
+
+.imgLove {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal {
+  opacity: 0;
+  padding: 50px;
+  position: absolute;
+  z-index: 1100;
+  transition: opacity 600ms linear 600ms;
+}
+
+.modal_info {
+  background: #FCF9F2;
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.modal_overlay {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: 900;
+  transition: opacity 200ms linear;
+}
+
+.display {
+  opacity: 1;
+  visibility: visible;
+}
+
+.conceal {
+  visibility: visible;
+}
+
+.btn_container {
+  height: 100%;
+  text-align: center;
+}
+
+.btn_container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+}
+
+.open_button {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  whitespace: normal;
+  z-index: 1000;
+  transition: opacity 100ms linear;
+}
+
+a.open_button {
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  line-height: 66px;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.open_button:hover {
+  background: #3E465A;
+}
+
+a.open_button.load {
+  opacity: 0;
+}
+
+button.modal_close {
+  background: #363D4E;
+  border: none;
+  border-radius: 50%;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: none;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  transition: -webkit-transform 600ms;
+  transition: transform 600ms;
+  transition: transform 600ms, -webkit-transform 600ms;
+}
+
+button.modal_close:hover {
+  background: #3E465A;
+  -webkit-transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.1);
+  transition: -webkit-transform 600ms;
+  transition: transform 600ms;
+  transition: transform 600ms, -webkit-transform 600ms;
+}
+
+button.modal_close span, span:before, span:after {
+  background: #FFFFFF;
+  content: '';
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 20px;
+}
+
+button.modal_close span:first-child {
+  background: none;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+button.modal_close span:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button.modal_close span:after {
+  -webkit-transform: translateY(-2px) rotate(-45deg);
+  transform: translateY(-2px) rotate(-45deg);
+  top: 2px;
+}
+
+    </style>
+
+  
+  
+  
+  
+
 </head>
-<body>
+
+<body translate="no">
+
   <div class="container" style="margin-right: 30px;">
-    <img class="imgLove" src="https://lh3.googleusercontent.com/DEALeWLY9OGx0G6IJjlnXuomgSmyaAF-Llr6WOg6V5_GcPHx3QYUajS1pcxwm4nxRU8_ldbi5vOtM8of2vVeXMhhlbIrAht07ELdXelCnxuatMZmhxJlVLbhJCTff09jZO5XrZsa-OvFc6xMuRr2fwJXLDlDCKN6eeZvIUs5CRIuAFOtECjjo4QxOYLcbrgGjVV02CH-MCH-PjH94wBng2AOhozd5fSv17X7eH6LP8inKE-FCmiXh9TAE6jNbBimqAbBMRN9E61AnDOGsDRywKzR20FnvtFkIRGVMaTI_ddydxHd8kgD45uhc7wz50fw-vJ8r0vekxDyDw5rKpKsc-19hJb3dcNZ9t2Ph7jMkOfqMzzqXFjWqipabGXHemWGg52RRw-OIUFqg_xyrHwddsYykfOkP1TpZnco6sBZWfexy2qjZ9szZOxr2wFN4UcyJfMR4qvUR2pq1oZJz2qVLPZBAA_ZtmJ5MnfJ0Y8ZadvhiGRwobmCiZGzkeqkEid9dnYNnAs67aNLT85kF7TEflCVU3MwhlfntffO0wg86Tqtxijqoj9CC_L02-Dx6qyyVmHoKd2VqItHzyFb8FzFIdSGbNDXCyPkbKTyYy6XDoW7ZaebRQ8rLDgd1LP5mAfqiimWEbj6jus9KUoRWsd0orNC=s664-no" alt="Fifi face">
-  </div>
-  <div class="container">
-  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     viewBox="0 0 269 264" style="enable-background:new 0 0 269 264;" xml:space="preserve">
-  <style type="text/css">
-    .st1{fill:#9BB133;}
-    .st2{fill:#E7E43B;}
-    .st3{fill:#6BABBD;}
-    .st4{fill:#38B133;}
-    .st5{fill:#E03BE7;}
-    .st6{fill:#E9ACC1;}
-    .st7{fill:#F04151;}
-    .st8{fill:#13414C;}
-    .st9{font-family:'Montserrat-Regular';}
-    .st10{font-size:23.9043px;}
-  </style>
-  <g>
-    <path id="Particle" class="st1" d="M84.7,71.5c-4.1-3.6-8.1-3.9-10.1-6.4c-1.2-1.5-1.3-4.2,0.4-5.6s4.6-0.6,5.9,0.5
-      C83.8,62.3,82.4,67.1,84.7,71.5z"/>
-    <path id="Particle_3_" class="st2" d="M100.5,49.6c-2-5.1-5.5-7.1-6.1-10.3c-0.4-1.9,0.7-4.4,2.9-4.8c2.2-0.5,4.4,1.5,5.1,3.1
-      C103.8,41,100.4,44.6,100.5,49.6z"/>
-    <path id="Particle_1_" class="st3" d="M134.9,63.9c0-5.4-2.4-8.6-1.8-11.8c0.4-1.9,2.3-3.8,4.5-3.4c2.2,0.4,3.5,3.1,3.5,4.8
-      C141.2,57.1,136.7,59.2,134.9,63.9z"/>
-    <path id="Particle_2_" class="st4" d="M170.5,47.1c-0.3-3.9-2.9-4.3-2-7.4c0.5-1.8,2.6-3.6,4.8-3s3.2,3.4,3.1,5
-      C176.1,45.4,172.6,44.1,170.5,47.1z"/>
-    <path id="Particle_10_" class="st1" d="M171.7,77.1c3.6-4.1,3.9-8.1,6.4-10.1c1.5-1.2,4.2-1.3,5.6,0.4c1.4,1.7,0.6,4.6-0.5,5.9
-      C180.9,76.2,176.1,74.8,171.7,77.1z"/>
-    <path id="Particle_4_" class="st5" d="M203.7,86c4.1-3.6,8.1-3.9,10.1-6.4c1.2-1.5,1.3-4.2-0.4-5.6c-1.7-1.4-4.6-0.6-5.9,0.5
-      C204.7,76.8,206.1,81.6,203.7,86z"/>
-    <path id="Particle_13_" class="st2" d="M221.7,107.9c5.1-2,7.1-5.5,10.3-6.1c1.9-0.4,4.4,0.7,4.8,2.9c0.5,2.2-1.5,4.4-3.1,5.1
-      C230.3,111.2,226.7,107.8,221.7,107.9z"/>
-    <path id="Particle_11_" class="st3" d="M205,131.4c5.4,0,8.6-2.4,11.8-1.8c1.9,0.4,3.8,2.3,3.4,4.5c-0.4,2.2-3.1,3.5-4.8,3.5
-      C211.7,137.6,209.6,133.1,205,131.4z"/>
-    <path id="Particle_12_" class="st4" d="M205,169.9c3.9-0.3,4.3-2.9,7.4-2c1.8,0.5,3.6,2.6,3,4.8c-0.6,2.2-3.4,3.2-5,3.1
-      C206.6,175.5,208,172,205,169.9z"/>
-    <path id="Particle_5_" class="st1" d="M184.6,187.1c4.1,3.6,8.1,3.9,10.1,6.4c1.2,1.5,1.3,4.2-0.4,5.6c-1.7,1.4-4.6,0.6-5.9-0.5
-      C185.5,196.3,186.9,191.5,184.6,187.1z"/>
-    <path id="Particle_8_" class="st2" d="M155.5,193.1c2,5.1,5.5,7.1,6.1,10.3c0.4,1.9-0.7,4.4-2.9,4.8c-2.2,0.5-4.4-1.5-5.1-3.1
-      C152.2,201.7,155.7,198.1,155.5,193.1z"/>
-    <path id="Particle_6_" class="st3" d="M129.4,214.1c0,5.4,2.4,8.6,1.8,11.8c-0.4,1.9-2.3,3.8-4.5,3.4c-2.2-0.4-3.5-3.1-3.5-4.8
-      C123.1,220.9,127.7,218.8,129.4,214.1z"/>
-    <path id="Particle_7_" class="st4" d="M111.3,197.4c0.3,3.9,2.9,4.3,2,7.4c-0.5,1.8-2.6,3.6-4.8,3c-2.2-0.6-3.2-3.4-3.1-5
-      C105.8,199.1,109.2,200.4,111.3,197.4z"/>
-    <path id="Particle_14_" class="st1" d="M85.6,191.1c-3.6,4.1-3.9,8.1-6.4,10.1c-1.5,1.2-4.2,1.3-5.6-0.4s-0.6-4.6,0.5-5.9
-      C76.4,192.1,81.2,193.5,85.6,191.1z"/>
-    <path id="Particle_9_" class="st5" d="M73.7,165.1c-4.1,3.6-8.1,3.9-10.1,6.4c-1.2,1.5-1.3,4.2,0.4,5.6c1.7,1.4,4.6,0.6,5.9-0.5
-      C72.8,174.3,71.4,169.5,73.7,165.1z"/>
-    <path id="Particle_17_" class="st2" d="M55.1,150c-5.1,2-7.1,5.5-10.3,6.1c-1.9,0.4-4.4-0.7-4.8-2.9c-0.5-2.2,1.5-4.4,3.1-5.1
-      C46.6,146.7,50.2,150.1,55.1,150z"/>
-    <path id="Particle_15_" class="st3" d="M59.4,114.8c-5.4,0-8.6,2.4-11.8,1.8c-1.9-0.4-3.8-2.3-3.4-4.5c0.4-2.2,3.1-3.5,4.8-3.5
-      C52.7,108.5,54.8,113.1,59.4,114.8z"/>
-    <path id="Particle_16_" class="st4" d="M82.6,93.7c-3.9,0.3-4.3,2.9-7.4,2c-1.8-0.5-3.6-2.6-3-4.8s3.4-3.2,5-3.1
-      C81,88.2,79.7,91.6,82.6,93.7z"/>
-  </g>
-  <g id="Circle">
-    <circle cx="134.7" cy="131.1" r="52"/>
-  </g>
-  <path id="Heart_2_" class="st7" d="M131.9,110.7c-6.8-6.3-17.4-6-23.7,0.8c-6.3,6.8-6,17.4,0.8,23.7l14.4,13.5l11.5,10.7l11.5-10.7
-    l14.4-13.5c6.8-6.3,7.1-16.9,0.8-23.7c-6.3-6.8-16.9-7.1-23.7-0.8l-2.9,2.7"/>
-  </svg>
-    <h1 id="Thanks" class="open">00
-      <p class="day"> Days</p>
-    </h1>
-  </div>
-  <div class="container" style="margin-left: 30px;">
-      <img class="imgLove" src="https://lh3.googleusercontent.com/JplhuaqwO_SIHX6K_t-56i9Zqr6wMQXNvQGLiSfonPkC0xrC1yONeLCfU7xBVnXGOIL03A71YAMrvB1rr6xVFVC3LHCVllBBRcjUm1S0My78w8wFP5Tk-7IG73wvPAY1JZRJG_wBBBeNUt4k7n2eT0sauHzvhm82SGLqT_SH1jumIBDsq705fhmE49cbf4cPZ81-Zz49HJbfMHRsR3UXCrvqUg3Uasgvgo8DzYvAAatIgawQiicPdqOMmVhD-j-NaBsCSfnWmS_dT8mc6hWR_Zn2yMYESMgspcezwpLw1WdeOAmLVbX9HHIW7iQRDG4ePgjVih4zQc3wzoK0SUkRJDQ5tXQ663YZiKA-_w9KZ2XcOoSz1M13su9Z6AmjQPh08ZsaeQyf-oqqNZutiSmqXIYCbA6_v-HecJNS-02A-Q1JUGl26pjds2CAXM_PuQlAZiZSYCvuSolO8k9xraY7OGZB3pP4Ene9W9L63Kvn-li8ax4z7zPIFG9lLpXsNoCNNLVEfQXxVYEjSU_3ZEXySqQUU6cVZ8y8292nfqcigym5H0in_B_2jqedDQTglM9LQI5sovt2sbGgOmydwO04BXi7QmEPIMNFMuAX2llpmK_GwiQ7M2OAkCsLrMGDS_DSDzPqwAf2KiryMc62XVuaI9BC=s666-no" alt="chang chang face">
-  </div>
-  
-  <div class="btn_container" style="display:none;">
-    <a class="open_button" href="#">Fire Away</a>
-  </div>
-  
-  <div class="modal_info" style="padding: 30px;">
+  <img class="imgLove" src="img/phi.png" alt="Fifi face">
+</div>
+<div class="container">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 269 264" style="enable-background:new 0 0 269 264;" xml:space="preserve">
+<style type="text/css">
+	.st1{fill:#9BB133;}
+	.st2{fill:#E7E43B;}
+	.st3{fill:#6BABBD;}
+	.st4{fill:#38B133;}
+	.st5{fill:#E03BE7;}
+	.st6{fill:#E9ACC1;}
+	.st7{fill:#F04151;}
+	.st8{fill:#13414C;}
+	.st9{font-family:'Montserrat-Regular';}
+	.st10{font-size:23.9043px;}
+</style>
+<g>
+	<path id="Particle" class="st1" d="M84.7,71.5c-4.1-3.6-8.1-3.9-10.1-6.4c-1.2-1.5-1.3-4.2,0.4-5.6s4.6-0.6,5.9,0.5
+		C83.8,62.3,82.4,67.1,84.7,71.5z"></path>
+	<path id="Particle_3_" class="st2" d="M100.5,49.6c-2-5.1-5.5-7.1-6.1-10.3c-0.4-1.9,0.7-4.4,2.9-4.8c2.2-0.5,4.4,1.5,5.1,3.1
+		C103.8,41,100.4,44.6,100.5,49.6z"></path>
+	<path id="Particle_1_" class="st3" d="M134.9,63.9c0-5.4-2.4-8.6-1.8-11.8c0.4-1.9,2.3-3.8,4.5-3.4c2.2,0.4,3.5,3.1,3.5,4.8
+		C141.2,57.1,136.7,59.2,134.9,63.9z"></path>
+	<path id="Particle_2_" class="st4" d="M170.5,47.1c-0.3-3.9-2.9-4.3-2-7.4c0.5-1.8,2.6-3.6,4.8-3s3.2,3.4,3.1,5
+		C176.1,45.4,172.6,44.1,170.5,47.1z"></path>
+	<path id="Particle_10_" class="st1" d="M171.7,77.1c3.6-4.1,3.9-8.1,6.4-10.1c1.5-1.2,4.2-1.3,5.6,0.4c1.4,1.7,0.6,4.6-0.5,5.9
+		C180.9,76.2,176.1,74.8,171.7,77.1z"></path>
+	<path id="Particle_4_" class="st5" d="M203.7,86c4.1-3.6,8.1-3.9,10.1-6.4c1.2-1.5,1.3-4.2-0.4-5.6c-1.7-1.4-4.6-0.6-5.9,0.5
+		C204.7,76.8,206.1,81.6,203.7,86z"></path>
+	<path id="Particle_13_" class="st2" d="M221.7,107.9c5.1-2,7.1-5.5,10.3-6.1c1.9-0.4,4.4,0.7,4.8,2.9c0.5,2.2-1.5,4.4-3.1,5.1
+		C230.3,111.2,226.7,107.8,221.7,107.9z"></path>
+	<path id="Particle_11_" class="st3" d="M205,131.4c5.4,0,8.6-2.4,11.8-1.8c1.9,0.4,3.8,2.3,3.4,4.5c-0.4,2.2-3.1,3.5-4.8,3.5
+		C211.7,137.6,209.6,133.1,205,131.4z"></path>
+	<path id="Particle_12_" class="st4" d="M205,169.9c3.9-0.3,4.3-2.9,7.4-2c1.8,0.5,3.6,2.6,3,4.8c-0.6,2.2-3.4,3.2-5,3.1
+		C206.6,175.5,208,172,205,169.9z"></path>
+	<path id="Particle_5_" class="st1" d="M184.6,187.1c4.1,3.6,8.1,3.9,10.1,6.4c1.2,1.5,1.3,4.2-0.4,5.6c-1.7,1.4-4.6,0.6-5.9-0.5
+		C185.5,196.3,186.9,191.5,184.6,187.1z"></path>
+	<path id="Particle_8_" class="st2" d="M155.5,193.1c2,5.1,5.5,7.1,6.1,10.3c0.4,1.9-0.7,4.4-2.9,4.8c-2.2,0.5-4.4-1.5-5.1-3.1
+		C152.2,201.7,155.7,198.1,155.5,193.1z"></path>
+	<path id="Particle_6_" class="st3" d="M129.4,214.1c0,5.4,2.4,8.6,1.8,11.8c-0.4,1.9-2.3,3.8-4.5,3.4c-2.2-0.4-3.5-3.1-3.5-4.8
+		C123.1,220.9,127.7,218.8,129.4,214.1z"></path>
+	<path id="Particle_7_" class="st4" d="M111.3,197.4c0.3,3.9,2.9,4.3,2,7.4c-0.5,1.8-2.6,3.6-4.8,3c-2.2-0.6-3.2-3.4-3.1-5
+		C105.8,199.1,109.2,200.4,111.3,197.4z"></path>
+	<path id="Particle_14_" class="st1" d="M85.6,191.1c-3.6,4.1-3.9,8.1-6.4,10.1c-1.5,1.2-4.2,1.3-5.6-0.4s-0.6-4.6,0.5-5.9
+		C76.4,192.1,81.2,193.5,85.6,191.1z"></path>
+	<path id="Particle_9_" class="st5" d="M73.7,165.1c-4.1,3.6-8.1,3.9-10.1,6.4c-1.2,1.5-1.3,4.2,0.4,5.6c1.7,1.4,4.6,0.6,5.9-0.5
+		C72.8,174.3,71.4,169.5,73.7,165.1z"></path>
+	<path id="Particle_17_" class="st2" d="M55.1,150c-5.1,2-7.1,5.5-10.3,6.1c-1.9,0.4-4.4-0.7-4.8-2.9c-0.5-2.2,1.5-4.4,3.1-5.1
+		C46.6,146.7,50.2,150.1,55.1,150z"></path>
+	<path id="Particle_15_" class="st3" d="M59.4,114.8c-5.4,0-8.6,2.4-11.8,1.8c-1.9-0.4-3.8-2.3-3.4-4.5c0.4-2.2,3.1-3.5,4.8-3.5
+		C52.7,108.5,54.8,113.1,59.4,114.8z"></path>
+	<path id="Particle_16_" class="st4" d="M82.6,93.7c-3.9,0.3-4.3,2.9-7.4,2c-1.8-0.5-3.6-2.6-3-4.8s3.4-3.2,5-3.1
+		C81,88.2,79.7,91.6,82.6,93.7z"></path>
+</g>
+<g id="Circle">
+	<circle cx="134.7" cy="131.1" r="52"></circle>
+</g>
+<path id="Heart_2_" class="st7" d="M131.9,110.7c-6.8-6.3-17.4-6-23.7,0.8c-6.3,6.8-6,17.4,0.8,23.7l14.4,13.5l11.5,10.7l11.5-10.7
+	l14.4-13.5c6.8-6.3,7.1-16.9,0.8-23.7c-6.3-6.8-16.9-7.1-23.7-0.8l-2.9,2.7"></path>
+</svg>
+  <h1 id="Thanks" class="open">92<p class="day"> Days</p>
+  </h1>
+</div>
+<div class="container" style="margin-left: 30px;">
+    <img class="imgLove" src="img/chang.png" alt="chang chang face">
+</div>
+
+<div class="btn_container" style="display:none;">
+  <a class="open_button" href="https://s.codepen.io/bac3phi/debug/bmXzed/XBAGRZmdnbdr#">Fire Away</a>
+</div>
+
+<div class="modal_info" style="padding: 30px;">
     <h2>️🎉Happy Anniversary!️🎉</h2>
     <h3>FiFi 💖 Chang Chang</h3>
     <p>Há lu Chang Chang của FiFi!. Hôm nay là tình yêu mình tròn 3 tháng tuổi, a mong mình sẽ còn nhiều nhiều những ngày kỉ niệm sau nữa 😆 Fifi code cả thế giới nhưng chỉ muốn dành riêng cho e thôi🤣. FiFi sẽ luôn kiên nhẫn, lắng nghe và yêu thương e nhiều hơn nữa. Mình còn rất nhiều dự định trong tương lai, hãy cùng nhau hoàn thành chúng cùng với a e nhé 😊 . Và điều cuối cùng anh muốn nói là <h4>ANH YÊU EM</h4>
     </p>
-  </div>
-  <div class="modal_overlay">
-  </div>
+  </div>  
+<div class="modal_overlay">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  
+  
+  
+
+    <script>
+      function addListener() {
+  var btn = document.querySelector('#Heart_2_');
+  btn.addEventListener("click", restart, false);  
+  $(".open_button").click();
+}
+
+function restart() {
+  var container = document.querySelector('#Layer_1');
+  var newContainer = container.cloneNode(true);
+  container.parentNode.replaceChild(newContainer, container);
+  addListener();
+}
+
+addListener();
+window.onload=function() {
+  // Month,Day,Year,Hour,Minute,Second
+  upTime('aug,03,2018,00:00:00'); // ****** Change this line!
+}
+function upTime(countTo) {
+  now = new Date();
+  countTo = new Date(countTo);
+  difference = (now-countTo);
+
+  days=Math.floor(difference/(60*60*1000*24)*1);
+  hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
+  mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
+  secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
+
+  document.getElementById('Thanks').firstChild.nodeValue = days;
+  document.getElementById('hours').firstChild.nodeValue = hours;
+  document.getElementById('minutes').firstChild.nodeValue = mins;
+  document.getElementById('seconds').firstChild.nodeValue = secs;
+
+  clearTimeout(upTime.to);
+  upTime.to=setTimeout(function(){ upTime(countTo); },1000);
+}
+(function(){
+  var $content = $('.modal_info').detach();
+
+  $('.open_button').on('click', function(e){
+    modal.open({
+      content: $content,
+      width: 540,
+      height: 270,
+    });
+    $content.addClass('modal_content');
+    $('.modal, .modal_overlay').addClass('display');
+    $('.open_button').addClass('load');
+  });
+}());
+
+var modal = (function(){
+
+  var $close = $('<button role="button" class="modal_close" title="Close"><span></span></button>');
+  var $content = $('<div class="modal_content"/>');
+  var $modal = $('<div class="modal"/>');
+  var $window = $(window);
+
+  $modal.append($content, $close);
+
+  $close.on('click', function(e){
+    $('.modal, .modal_overlay').addClass('conceal');
+    $('.modal, .modal_overlay').removeClass('display');
+    $('.open_button').removeClass('load');
+    e.preventDefault();
+    modal.close();
+    location.reload(true)
+  });
+
+  return {
+    center: function(){
+      var top = Math.max($window.height() - $modal.outerHeight(), 0) / 2;
+      var left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
+      $modal.css({
+        top: top + $window.scrollTop(),
+        left: left + $window.scrollLeft(),
+      });
+    },
+    open: function(settings){
+      $content.empty().append(settings.content);
+
+      $modal.css({
+        width: settings.width || 'auto',
+        height: settings.height || 'auto'
+      }).appendTo('body');
+
+      modal.center();
+      $(window).on('resize', modal.center);
+    },
+    close: function(){
+      $content.empty();
+      $modal.detach();
+      $(window).off('resize', modal.center);
+    }
+  };
+}());
+    </script>
+
+
+
+  
+  
+
+  <script src="https://static.codepen.io/assets/editor/live/css_reload-2a5c7ad0fe826f66e054c6020c99c1e1c63210256b6ba07eb41d7a4cb0d0adab.js"></script>
+
+
+
  
-</body>
-</html>
+</body></html>
